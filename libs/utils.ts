@@ -28,7 +28,7 @@ function convertMp4ToWebp(path: string, loop = 0) {
             .noAudio()
             .outputOptions([
                 `-loop ${loop}`,
-                '-lossless 1'
+                '-quality 80'
             ])
             .run()
     })
