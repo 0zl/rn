@@ -2,17 +2,17 @@ import WebVideoCreator, { VIDEO_ENCODER } from 'web-video-creator'
 import { ParsedArguments } from './args'
 
 class WVC extends WebVideoCreator {
-    args: ParsedArguments
+    RN_ARGS: ParsedArguments
 
     constructor(args: ParsedArguments) {
         super()
-        this.args = args
+        this.RN_ARGS = args
     }
 
     async wvcInit() {
         this.config({
-            mp4Encoder: this.args.gpu ? VIDEO_ENCODER.NVIDIA.H264 : VIDEO_ENCODER.CPU.H264,
-            browserUseGPU: Boolean(this.args.gpu),
+            mp4Encoder: this.RN_ARGS.gpu ? VIDEO_ENCODER.NVIDIA.H264 : VIDEO_ENCODER.CPU.H264,
+            browserUseGPU: Boolean(this.RN_ARGS.gpu),
             browserDisableDevShm: true
         })
     }
