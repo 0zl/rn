@@ -8,4 +8,4 @@ apt install -y ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 # fonts
-sudo apt install -y fonts-* # lmao
+apt install -y fonts-* # lmao
