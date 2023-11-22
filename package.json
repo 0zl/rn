@@ -1,0 +1,16 @@
+{
+  "name": "rn",
+  "module": "main.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "web-video-creator": "^0.0.25"
+  }
+}

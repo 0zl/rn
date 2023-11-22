@@ -1,0 +1,1 @@
+declare module 'web-video-creator' // since wvc declaration file is not exists.
