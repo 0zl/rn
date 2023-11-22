@@ -26,7 +26,8 @@ class WVC extends WebVideoCreator {
             browserUseGPU: Boolean(this.RN_ARGS.gpu),
             browserDisableDevShm: true,
             ffmpegExecutablePath: this.RN_ARGS.ffmpeg || '/usr/bin/ffmpeg',
-            ffprobeExecutablePath: this.RN_ARGS.ffprobe || '/usr/bin/ffprobe'
+            ffprobeExecutablePath: this.RN_ARGS.ffprobe || '/usr/bin/ffprobe',
+            browserExecutablePath: this.RN_ARGS.chrome,
         })
     }
 
