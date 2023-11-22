@@ -11,3 +11,6 @@ rm google-chrome-stable_current_amd64.deb
 
 # fonts
 apt install -y fonts-* # lmao
+
+which google-chrome
+which chromium-browser # idk?
