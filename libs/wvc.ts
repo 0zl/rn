@@ -33,7 +33,7 @@ class WVC extends WebVideoCreator {
 
     wvcRecord(options: Record<string, snbn>) {
         const opts = merge(this.DefaultVideoOptions, options, {
-            outputPath: allocOutFile()
+            outputPath: allocOutFile(options?.format as string | undefined ?? 'mp4')
         })
 
         return new Promise((res, rej) => {
