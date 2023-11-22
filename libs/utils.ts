@@ -25,9 +25,11 @@ function convertMp4ToWebp(path: string, loop = 0) {
             })
             .videoCodec('libwebp')
             .native()
-            .loop(loop)
             .noAudio()
-            .inputOptions('-lossless 1')
+            .outputOptions([
+                `-loop ${loop}`,
+                '-lossless 1'
+            ])
             .run()
     })
 }
