@@ -28,6 +28,7 @@ class WVC extends WebVideoCreator {
             ffmpegExecutablePath: this.RN_ARGS.ffmpeg || '/usr/bin/ffmpeg',
             ffprobeExecutablePath: this.RN_ARGS.ffprobe || '/usr/bin/ffprobe',
             browserExecutablePath: this.RN_ARGS.chrome,
+            frameQuality: 100
         })
     }
 
