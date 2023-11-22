@@ -24,7 +24,9 @@ class WVC extends WebVideoCreator {
         this.config({
             mp4Encoder: this.RN_ARGS.gpu ? VIDEO_ENCODER.NVIDIA.H264 : VIDEO_ENCODER.CPU.H264,
             browserUseGPU: Boolean(this.RN_ARGS.gpu),
-            browserDisableDevShm: true
+            browserDisableDevShm: true,
+            ffmpegExecutablePath: this.RN_ARGS.ffmpeg || '/usr/bin/ffmpeg',
+            ffprobeExecutablePath: this.RN_ARGS.ffprobe || '/usr/bin/ffprobe'
         })
     }
 

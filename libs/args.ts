@@ -2,13 +2,20 @@ import { program } from 'commander'
 
 interface ParsedArguments {
     gpu: true | undefined
+    ffmpeg: string | undefined
+    ffprobe: string | undefined
 }
 
 function parseArgs() {
-    return program
+    const args = program
         .option('--gpu', 'Use GPU Accelerator')
+        .option('--ffmpeg [VALUE]', 'Path to ffmpeg executable')
+        .option('--ffprobe [VALUE]', 'Path to ffprobe executable')
         .parse(process.argv)
         .opts() as ParsedArguments
+
+    console.log(args)
+    return args
 }
 
 export {
