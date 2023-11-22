@@ -7,7 +7,7 @@ class RN {
 
     async init() {
         this.wvc = new WVC(this.args)
-        await this.wvc.wvcInit()
+        this.wvc.wvcInit()
     }
 }
 
